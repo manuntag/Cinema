@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A85E2681A8307CA0035E959 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A85E2671A8307CA0035E959 /* MovieViewController.m */; };
+		8AA6C3681A832494001A65F5 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6C3671A832494001A65F5 /* WebViewController.m */; };
 		8AE037171A82AEB000AD8AAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE037161A82AEB000AD8AAD /* main.m */; };
 		8AE0371A1A82AEB000AD8AAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE037191A82AEB000AD8AAD /* AppDelegate.m */; };
 		8AE0371D1A82AEB000AD8AAD /* Cinema.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0371B1A82AEB000AD8AAD /* Cinema.xcdatamodeld */; };
-		8AE037201A82AEB000AD8AAD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0371F1A82AEB000AD8AAD /* ViewController.m */; };
 		8AE037231A82AEB000AD8AAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AE037211A82AEB000AD8AAD /* Main.storyboard */; };
 		8AE037251A82AEB000AD8AAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AE037241A82AEB000AD8AAD /* Images.xcassets */; };
 		8AE037281A82AEB000AD8AAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE037261A82AEB000AD8AAD /* LaunchScreen.xib */; };
 		8AE037341A82AEB000AD8AAD /* CinemaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE037331A82AEB000AD8AAD /* CinemaTests.m */; };
+		8AE0373F1A82B65600AD8AAD /* MainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0373E1A82B65600AD8AAD /* MainCollectionViewController.m */; };
+		8AE037421A82B6C700AD8AAD /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE037411A82B6C700AD8AAD /* Movie.m */; };
+		8AE037451A82D40100AD8AAD /* MovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE037441A82D40100AD8AAD /* MovieCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,20 +32,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A85E2661A8307CA0035E959 /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieViewController.h; path = ../MovieViewController.h; sourceTree = "<group>"; };
+		8A85E2671A8307CA0035E959 /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieViewController.m; path = ../MovieViewController.m; sourceTree = "<group>"; };
+		8AA6C3661A832494001A65F5 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
+		8AA6C3671A832494001A65F5 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
 		8AE037111A82AEB000AD8AAD /* Cinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cinema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE037151A82AEB000AD8AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AE037161A82AEB000AD8AAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8AE037181A82AEB000AD8AAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8AE037191A82AEB000AD8AAD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8AE0371C1A82AEB000AD8AAD /* Cinema.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cinema.xcdatamodel; sourceTree = "<group>"; };
-		8AE0371E1A82AEB000AD8AAD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8AE0371F1A82AEB000AD8AAD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8AE037221A82AEB000AD8AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AE037241A82AEB000AD8AAD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8AE037271A82AEB000AD8AAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8AE0372D1A82AEB000AD8AAD /* CinemaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CinemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE037321A82AEB000AD8AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AE037331A82AEB000AD8AAD /* CinemaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaTests.m; sourceTree = "<group>"; };
+		8AE0373D1A82B65600AD8AAD /* MainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainCollectionViewController.h; path = ../MainCollectionViewController.h; sourceTree = "<group>"; };
+		8AE0373E1A82B65600AD8AAD /* MainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainCollectionViewController.m; path = ../MainCollectionViewController.m; sourceTree = "<group>"; };
+		8AE037401A82B6C700AD8AAD /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		8AE037411A82B6C700AD8AAD /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		8AE037431A82D40100AD8AAD /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieCollectionViewCell.h; path = ../MovieCollectionViewCell.h; sourceTree = "<group>"; };
+		8AE037441A82D40100AD8AAD /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieCollectionViewCell.m; path = ../MovieCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,13 +95,17 @@
 		8AE037131A82AEB000AD8AAD /* Cinema */ = {
 			isa = PBXGroup;
 			children = (
-				8AE037181A82AEB000AD8AAD /* AppDelegate.h */,
-				8AE037191A82AEB000AD8AAD /* AppDelegate.m */,
-				8AE0371E1A82AEB000AD8AAD /* ViewController.h */,
-				8AE0371F1A82AEB000AD8AAD /* ViewController.m */,
+				8AE037401A82B6C700AD8AAD /* Movie.h */,
+				8AE037411A82B6C700AD8AAD /* Movie.m */,
+				8AE0373D1A82B65600AD8AAD /* MainCollectionViewController.h */,
+				8AE0373E1A82B65600AD8AAD /* MainCollectionViewController.m */,
+				8AE037431A82D40100AD8AAD /* MovieCollectionViewCell.h */,
+				8AE037441A82D40100AD8AAD /* MovieCollectionViewCell.m */,
+				8A85E2661A8307CA0035E959 /* MovieViewController.h */,
+				8A85E2671A8307CA0035E959 /* MovieViewController.m */,
+				8AA6C3661A832494001A65F5 /* WebViewController.h */,
+				8AA6C3671A832494001A65F5 /* WebViewController.m */,
 				8AE037211A82AEB000AD8AAD /* Main.storyboard */,
-				8AE037241A82AEB000AD8AAD /* Images.xcassets */,
-				8AE037261A82AEB000AD8AAD /* LaunchScreen.xib */,
 				8AE0371B1A82AEB000AD8AAD /* Cinema.xcdatamodeld */,
 				8AE037141A82AEB000AD8AAD /* Supporting Files */,
 			);
@@ -99,6 +115,10 @@
 		8AE037141A82AEB000AD8AAD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8AE037181A82AEB000AD8AAD /* AppDelegate.h */,
+				8AE037191A82AEB000AD8AAD /* AppDelegate.m */,
+				8AE037241A82AEB000AD8AAD /* Images.xcassets */,
+				8AE037261A82AEB000AD8AAD /* LaunchScreen.xib */,
 				8AE037151A82AEB000AD8AAD /* Info.plist */,
 				8AE037161A82AEB000AD8AAD /* main.m */,
 			);
@@ -223,9 +243,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AE0371A1A82AEB000AD8AAD /* AppDelegate.m in Sources */,
+				8AE0373F1A82B65600AD8AAD /* MainCollectionViewController.m in Sources */,
+				8AE037421A82B6C700AD8AAD /* Movie.m in Sources */,
+				8AA6C3681A832494001A65F5 /* WebViewController.m in Sources */,
+				8A85E2681A8307CA0035E959 /* MovieViewController.m in Sources */,
 				8AE037171A82AEB000AD8AAD /* main.m in Sources */,
-				8AE037201A82AEB000AD8AAD /* ViewController.m in Sources */,
 				8AE0371D1A82AEB000AD8AAD /* Cinema.xcdatamodeld in Sources */,
+				8AE037451A82D40100AD8AAD /* MovieCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Cinema/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Cinema/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +442,7 @@
 				8AE037391A82AEB000AD8AAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8AE0373A1A82AEB000AD8AAD /* Build configuration list for PBXNativeTarget "CinemaTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +451,7 @@
 				8AE0373C1A82AEB000AD8AAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

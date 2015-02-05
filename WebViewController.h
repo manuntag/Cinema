@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WebViewController.h
 //  Cinema
 //
 //  Created by David Manuntag on 2015-02-04.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface WebViewController : UIViewController
 
+@property(nonatomic, strong) NSURL * mobileURL;
 
 @end
-
