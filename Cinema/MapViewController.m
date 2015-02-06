@@ -12,6 +12,8 @@
 @interface MapViewController ()<CLLocationManagerDelegate> {
 
     CLLocationManager * _locationManager;
+    CLGeocoder * geoCoder;
+    CLPlacemark * placeMark;
 }
 @property (strong, nonatomic) Theatres * theatre;
 
@@ -25,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    
     _locationManager = [[CLLocationManager alloc]init];
     _locationManager.delegate = self;
 
@@ -35,7 +38,10 @@
     self.mapView.showsUserLocation = true;
     self.mapView.delegate = self;
     
+    geoCoder = [[CLGeocoder alloc]init];
+    
     _pinArray = [NSMutableArray array];
+    
     
 }
 
@@ -61,8 +67,17 @@
         [mapView setRegion:region animated:YES];
         
     }
+    
+    [geoCoder reverseGeocodeLocation:userLocation.location completionHandler:^(NSArray *placemarks, NSError *error) {
+        
+        placeMark = [placemarks lastObject];
+        
+        NSLog(@"\nPOSTAL CODE:%@\nAddress Number:%@\nStreet:%@\n:City:%@\n:Province:%@\nCountry:%@", placeMark.postalCode, placeMark.subThoroughfare, placeMark.thoroughfare, placeMark.locality, placeMark.administrativeArea, placeMark.country);
+        
+        
+    }];
+    
 }
-
 
 
 -(NSString*)movieSearchWithTitle:(NSString*)title {

@@ -44,20 +44,15 @@
  
     if ([segue.identifier isEqualToString:@"webSegue"]) {
     
-       
         [segue.destinationViewController setMobileURL:self.movie.url];
     
-    
-    } else if ([segue.identifier isEqualToString:@"findTheatre"]) {
-        
-        
-        [segue.destinationViewController setMovieTextField:self.movie.title];
-        
     }
     
-    
-    
 }
+    
+    
+    
+
 
 
 @end
