@@ -23,56 +23,70 @@
     
     NSURL * movieUrl = [NSURL URLWithString:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=67wvyzu4w3kdywss4ewd9ryp&page_limit=10"];
     
-    NSData * jsonData = [NSData dataWithContentsOfURL:movieUrl];
+    //NSData * jsonData = [NSData dataWithContentsOfURL:movieUrl];
     
-    NSError * error = nil;
+    NSURLSessionDataTask *dataTask = [[NSURLSession sharedSession] dataTaskWithURL:movieUrl completionHandler:^(NSData *jsonData, NSURLResponse *response, NSError *error) {
+        
+       
+        NSError * jsonError = nil;
+        
+        NSDictionary * dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&jsonError];
+        
+        if (!dataDictionary) {
+            NSLog(@"error decoding json %@, network error %@", jsonError, error);
+            return;
+        }
+        
+        self.movies = [NSMutableArray array];
+        
+        //array to hold dictionary objects
+        
+        NSArray * moviesArray = [dataDictionary objectForKey:@"movies"];
+        
+        // loop to access the items in the datadictionary
+        //NSLog(@"in viewdidload moviesArray:%@", moviesArray);
+        
+        for (NSDictionary * movieDictionary in moviesArray) {
+            
+            Movie * movie = [[Movie alloc]initWithMovieTitle:[movieDictionary objectForKey:@"title"]];
+            
+            // movie ratings
+            NSDictionary * ratingsDictionary = [movieDictionary objectForKey:@"ratings"];
+            NSNumber * audienceRating = [ratingsDictionary objectForKey:@"audience_score"];
+            
+            NSString * audienceRatingString = [audienceRating stringValue];
+            movie.audienceRating = audienceRatingString;
+            NSString * criticsRating = [ratingsDictionary objectForKey:@"critics_rating"];
+            movie.rating = criticsRating;
+            
+            //movie image
+            NSDictionary * postersDictionary = [movieDictionary objectForKey:@"posters"];
+            NSString * poster = [postersDictionary objectForKey:@"thumbnail"];
+            
+            NSString * hiResPoster = [poster stringByReplacingOccurrencesOfString:@"_tmb.jpg" withString:@"_det.jpg"];
+            
+            NSURL *imageUrl = [NSURL URLWithString:hiResPoster];
+            NSData * imageData = [NSData dataWithContentsOfURL:imageUrl];
+            movie.image = [UIImage imageWithData:imageData];
+            
+            //movie synopsis
+            
+            movie.synopsis = [movieDictionary objectForKey:@"synopsis"];
+            
+            //movie url
+            NSDictionary * urlDictionary = [movieDictionary objectForKey:@"links"];
+            movie.url = [NSURL URLWithString:[urlDictionary objectForKey:@"alternate"]];
+            
+            [self.movies addObject:movie];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.collectionView reloadData];
+            });
+            
+        }
+    }];
     
-    NSDictionary * dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
-    
-    self.movies = [NSMutableArray array];
-    
-    //array to hold dictionary objects
-    
-    NSArray * moviesArray = [dataDictionary objectForKey:@"movies"];
-    
-    // loop to access the items in the datadictionary
-    //NSLog(@"in viewdidload moviesArray:%@", moviesArray);
-    
-    for (NSDictionary * movieDictionary in moviesArray) {
-        
-        Movie * movie = [[Movie alloc]initWithMovieTitle:[movieDictionary objectForKey:@"title"]];
-        
-        // movie ratings
-        NSDictionary * ratingsDictionary = [movieDictionary objectForKey:@"ratings"];
-        NSNumber * audienceRating = [ratingsDictionary objectForKey:@"audience_score"];
-        
-        NSString * audienceRatingString = [audienceRating stringValue];
-        movie.audienceRating = audienceRatingString;
-        NSString * criticsRating = [ratingsDictionary objectForKey:@"critics_rating"];
-        movie.rating = criticsRating;
-        
-        //movie image
-        NSDictionary * postersDictionary = [movieDictionary objectForKey:@"posters"];
-        NSString * poster = [postersDictionary objectForKey:@"thumbnail"];
-        
-        NSString * hiResPoster = [poster stringByReplacingOccurrencesOfString:@"_tmb.jpg" withString:@"_det.jpg"];
-        
-        NSURL *imageUrl = [NSURL URLWithString:hiResPoster];
-        NSData * imageData = [NSData dataWithContentsOfURL:imageUrl];
-        movie.image = [UIImage imageWithData:imageData];
-        
-        //movie synopsis
-        
-        movie.synopsis = [movieDictionary objectForKey:@"synopsis"];
-        
-        //movie url
-        NSDictionary * urlDictionary = [movieDictionary objectForKey:@"links"];
-        movie.url = [NSURL URLWithString:[urlDictionary objectForKey:@"alternate"]];
-        
-        [self.movies addObject:movie];
-    }
-    
-    
+    [dataTask resume];
 }
 
 

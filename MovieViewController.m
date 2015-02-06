@@ -8,6 +8,7 @@
 
 #import "MovieViewController.h"
 #import "Movie.h"
+#import "MapViewController.h"
 
 #import "WebViewController.h"
 
@@ -42,12 +43,16 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
  
     if ([segue.identifier isEqualToString:@"webSegue"]) {
-       
-//        WebViewController * viewcontroller = segue.destinationViewController;
+    
        
         [segue.destinationViewController setMobileURL:self.movie.url];
     
     
+    } else if ([segue.identifier isEqualToString:@"findTheatre"]) {
+        
+        
+        [segue.destinationViewController setMovieTextField:self.movie.title];
+        
     }
     
     

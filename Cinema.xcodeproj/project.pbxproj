@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		8A85E2681A8307CA0035E959 /* MovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A85E2671A8307CA0035E959 /* MovieViewController.m */; };
 		8AA6C3681A832494001A65F5 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6C3671A832494001A65F5 /* WebViewController.m */; };
+		8AA6C36C1A8401ED001A65F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA6C36B1A8401ED001A65F5 /* MapKit.framework */; };
+		8AA6C36E1A8401F8001A65F5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AA6C36D1A8401F8001A65F5 /* CoreLocation.framework */; };
+		8AA6C3711A84033C001A65F5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6C3701A84033C001A65F5 /* MapViewController.m */; };
+		8AA6C3731A8409CF001A65F5 /* location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 8AA6C3721A8409CF001A65F5 /* location.gpx */; };
+		8AA6C3761A840F0F001A65F5 /* Theatres.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA6C3751A840F0F001A65F5 /* Theatres.m */; };
 		8AE037171A82AEB000AD8AAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE037161A82AEB000AD8AAD /* main.m */; };
 		8AE0371A1A82AEB000AD8AAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE037191A82AEB000AD8AAD /* AppDelegate.m */; };
 		8AE0371D1A82AEB000AD8AAD /* Cinema.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8AE0371B1A82AEB000AD8AAD /* Cinema.xcdatamodeld */; };
@@ -32,10 +37,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8A85E2661A8307CA0035E959 /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieViewController.h; path = ../MovieViewController.h; sourceTree = "<group>"; };
-		8A85E2671A8307CA0035E959 /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieViewController.m; path = ../MovieViewController.m; sourceTree = "<group>"; };
-		8AA6C3661A832494001A65F5 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
-		8AA6C3671A832494001A65F5 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
+		8A85E2661A8307CA0035E959 /* MovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewController.h; sourceTree = "<group>"; };
+		8A85E2671A8307CA0035E959 /* MovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewController.m; sourceTree = "<group>"; };
+		8AA6C3661A832494001A65F5 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		8AA6C3671A832494001A65F5 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		8AA6C36B1A8401ED001A65F5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8AA6C36D1A8401F8001A65F5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8AA6C36F1A84033C001A65F5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		8AA6C3701A84033C001A65F5 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		8AA6C3721A8409CF001A65F5 /* location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = location.gpx; path = ../location.gpx; sourceTree = "<group>"; };
+		8AA6C3741A840F0F001A65F5 /* Theatres.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Theatres.h; sourceTree = "<group>"; };
+		8AA6C3751A840F0F001A65F5 /* Theatres.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Theatres.m; sourceTree = "<group>"; };
 		8AE037111A82AEB000AD8AAD /* Cinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cinema.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE037151A82AEB000AD8AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AE037161A82AEB000AD8AAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,12 +60,12 @@
 		8AE0372D1A82AEB000AD8AAD /* CinemaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CinemaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AE037321A82AEB000AD8AAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AE037331A82AEB000AD8AAD /* CinemaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CinemaTests.m; sourceTree = "<group>"; };
-		8AE0373D1A82B65600AD8AAD /* MainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainCollectionViewController.h; path = ../MainCollectionViewController.h; sourceTree = "<group>"; };
-		8AE0373E1A82B65600AD8AAD /* MainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainCollectionViewController.m; path = ../MainCollectionViewController.m; sourceTree = "<group>"; };
-		8AE037401A82B6C700AD8AAD /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
-		8AE037411A82B6C700AD8AAD /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
-		8AE037431A82D40100AD8AAD /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieCollectionViewCell.h; path = ../MovieCollectionViewCell.h; sourceTree = "<group>"; };
-		8AE037441A82D40100AD8AAD /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieCollectionViewCell.m; path = ../MovieCollectionViewCell.m; sourceTree = "<group>"; };
+		8AE0373D1A82B65600AD8AAD /* MainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewController.h; sourceTree = "<group>"; };
+		8AE0373E1A82B65600AD8AAD /* MainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewController.m; sourceTree = "<group>"; };
+		8AE037401A82B6C700AD8AAD /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = Cinema/Movie.h; sourceTree = "<group>"; };
+		8AE037411A82B6C700AD8AAD /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = Cinema/Movie.m; sourceTree = "<group>"; };
+		8AE037431A82D40100AD8AAD /* MovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCollectionViewCell.h; sourceTree = "<group>"; };
+		8AE037441A82D40100AD8AAD /* MovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AA6C36E1A8401F8001A65F5 /* CoreLocation.framework in Frameworks */,
+				8AA6C36C1A8401ED001A65F5 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +88,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AA6C3691A83FB67001A65F5 /* Movies Tab */ = {
+			isa = PBXGroup;
+			children = (
+				8AE037401A82B6C700AD8AAD /* Movie.h */,
+				8AE037411A82B6C700AD8AAD /* Movie.m */,
+				8AE0373D1A82B65600AD8AAD /* MainCollectionViewController.h */,
+				8AE0373E1A82B65600AD8AAD /* MainCollectionViewController.m */,
+				8AE037431A82D40100AD8AAD /* MovieCollectionViewCell.h */,
+				8AE037441A82D40100AD8AAD /* MovieCollectionViewCell.m */,
+				8A85E2661A8307CA0035E959 /* MovieViewController.h */,
+				8A85E2671A8307CA0035E959 /* MovieViewController.m */,
+				8AA6C3661A832494001A65F5 /* WebViewController.h */,
+				8AA6C3671A832494001A65F5 /* WebViewController.m */,
+			);
+			name = "Movies Tab";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8AA6C36A1A83FB93001A65F5 /* Theatres Tab */ = {
+			isa = PBXGroup;
+			children = (
+				8AA6C3741A840F0F001A65F5 /* Theatres.h */,
+				8AA6C3751A840F0F001A65F5 /* Theatres.m */,
+				8AA6C36F1A84033C001A65F5 /* MapViewController.h */,
+				8AA6C3701A84033C001A65F5 /* MapViewController.m */,
+			);
+			name = "Theatres Tab";
+			sourceTree = "<group>";
+		};
 		8AE037081A82AEB000AD8AAD = {
 			isa = PBXGroup;
 			children = (
+				8AA6C36D1A8401F8001A65F5 /* CoreLocation.framework */,
+				8AA6C36B1A8401ED001A65F5 /* MapKit.framework */,
 				8AE037131A82AEB000AD8AAD /* Cinema */,
 				8AE037301A82AEB000AD8AAD /* CinemaTests */,
 				8AE037121A82AEB000AD8AAD /* Products */,
@@ -95,16 +140,8 @@
 		8AE037131A82AEB000AD8AAD /* Cinema */ = {
 			isa = PBXGroup;
 			children = (
-				8AE037401A82B6C700AD8AAD /* Movie.h */,
-				8AE037411A82B6C700AD8AAD /* Movie.m */,
-				8AE0373D1A82B65600AD8AAD /* MainCollectionViewController.h */,
-				8AE0373E1A82B65600AD8AAD /* MainCollectionViewController.m */,
-				8AE037431A82D40100AD8AAD /* MovieCollectionViewCell.h */,
-				8AE037441A82D40100AD8AAD /* MovieCollectionViewCell.m */,
-				8A85E2661A8307CA0035E959 /* MovieViewController.h */,
-				8A85E2671A8307CA0035E959 /* MovieViewController.m */,
-				8AA6C3661A832494001A65F5 /* WebViewController.h */,
-				8AA6C3671A832494001A65F5 /* WebViewController.m */,
+				8AA6C36A1A83FB93001A65F5 /* Theatres Tab */,
+				8AA6C3691A83FB67001A65F5 /* Movies Tab */,
 				8AE037211A82AEB000AD8AAD /* Main.storyboard */,
 				8AE0371B1A82AEB000AD8AAD /* Cinema.xcdatamodeld */,
 				8AE037141A82AEB000AD8AAD /* Supporting Files */,
@@ -115,6 +152,7 @@
 		8AE037141A82AEB000AD8AAD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8AA6C3721A8409CF001A65F5 /* location.gpx */,
 				8AE037181A82AEB000AD8AAD /* AppDelegate.h */,
 				8AE037191A82AEB000AD8AAD /* AppDelegate.m */,
 				8AE037241A82AEB000AD8AAD /* Images.xcassets */,
@@ -224,6 +262,7 @@
 			files = (
 				8AE037231A82AEB000AD8AAD /* Main.storyboard in Resources */,
 				8AE037281A82AEB000AD8AAD /* LaunchScreen.xib in Resources */,
+				8AA6C3731A8409CF001A65F5 /* location.gpx in Resources */,
 				8AE037251A82AEB000AD8AAD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +284,8 @@
 				8AE0371A1A82AEB000AD8AAD /* AppDelegate.m in Sources */,
 				8AE0373F1A82B65600AD8AAD /* MainCollectionViewController.m in Sources */,
 				8AE037421A82B6C700AD8AAD /* Movie.m in Sources */,
+				8AA6C3761A840F0F001A65F5 /* Theatres.m in Sources */,
+				8AA6C3711A84033C001A65F5 /* MapViewController.m in Sources */,
 				8AA6C3681A832494001A65F5 /* WebViewController.m in Sources */,
 				8A85E2681A8307CA0035E959 /* MovieViewController.m in Sources */,
 				8AE037171A82AEB000AD8AAD /* main.m in Sources */,
